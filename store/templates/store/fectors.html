@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Factors</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --transition-speed: 0.3s;
+        }
+
+        body {
+            background-color: #f5f6fa;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: #2c3e50;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: slideIn 1s ease-out;
+        }
+
+        header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .factor {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            border: none;
+        }
+
+        .factor:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+
+        .factor p {
+            color: #6c757d;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .learn-more-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            margin-top: 1.5em;
+            transition: all 0.2s ease;
+            gap: 5px;
+        }
+
+        .learn-more-btn:hover {
+            background: #3867d6;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(78, 115, 223, 0.2);
+        }
+
+        footer {
+            background: linear-gradient(145deg, #1a1c23 0%, #23252f 100%);
+            padding: 4rem 0 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer-title {
+            color: #4e73df;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1rem;
+                gap: 20px;
+            }
+
+            .factor {
+                padding: 1.5rem;
+            }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heart Disease Prediction Factors</h1>
+        <p>Understanding the key indicators of heart health</p>
+    </header>
+    
+    <div class="container">
+        <div class="factor">
+            <h2>1. Age</h2>
+            <p>Risk increases with age as blood vessels become less flexible and heart function changes. Regular check-ups become crucial for monitoring cardiovascular health in older adults.</p>
+        </div>
+        <div class="factor">
+            <h2>2. Gender</h2>
+            <p>Men face higher risks earlier in life. Women's risk increases after menopause due to reduced estrogen protection. Both genders need to maintain heart-healthy lifestyles.</p>
+        </div>
+        <div class="factor">
+            <h2>3. Chest Pain Types</h2>
+            <p>Different types of chest pain can indicate various heart conditions, ranging from typical angina to non-cardiac pain. Understanding the type helps in diagnosis.</p>
+        </div>
+        <div class="factor">
+            <h2>4. Resting Blood Pressure</h2>
+            <p>High blood pressure strains the heart and blood vessels. Normal range is typically below 120/80 mmHg. Regular monitoring is essential.</p>
+        </div>
+        <div class="factor">
+            <h2>5. Cholesterol</h2>
+            <p>High cholesterol leads to arterial plaque buildup. Managing both LDL (bad) and HDL (good) cholesterol is key to heart health.</p>
+        </div>
+        <div class="factor">
+            <h2>6. Fasting Blood Sugar</h2>
+            <p>Elevated levels (>120 mg/dl) suggest diabetes risk. Diabetes significantly increases the likelihood of heart disease development.</p>
+        </div>
+        <div class="factor">
+            <h2>7. Resting ECG Results</h2>
+            <p>ECG readings show heart rhythm and potential abnormalities. Regular ECG tests help detect early signs of heart problems.</p>
+        </div>
+        <div class="factor">
+            <h2>8. Maximum Heart Rate</h2>
+            <p>Lower maximum heart rate during exercise may indicate cardiovascular issues. Age-related changes affect normal ranges.</p>
+        </div>
+        <div class="factor">
+            <h2>9. Exercise-Induced Angina</h2>
+            <p>Chest pain during physical activity suggests reduced blood flow to the heart. A key indicator of coronary artery disease.</p>
+        </div>
+        <div class="factor">
+            <h2>10. ST Depression</h2>
+            <p>ECG changes during exercise indicate potential heart stress. The degree of depression correlates with disease severity.</p>
+        </div>
+        <div class="factor">
+            <h2>11. ST Segment Slope</h2>
+            <p>The slope pattern during stress tests helps evaluate heart condition. Different patterns indicate varying levels of risk.</p>
+        </div>
+        <div class="factor">
+            <h2>12. Major Vessels</h2>
+            <p>Number of blocked major blood vessels affects heart disease severity. More blockages indicate higher risk levels.</p>
+        </div>
+    </div>
+
+    <div class="scroll-to-top" onclick="scrollToTop()">↑</div>
+
+    <footer>
+        <p>Sources: American Heart Association, Mayo Clinic, National Heart, Lung, and Blood Institute</p>
+        <p>&copy; 2025 Heart Health Awareness | Stay Heart Healthy</p>
+    </footer>
+
+    <script>
+        // Show/hide scroll-to-top button
+        window.onscroll = function() {
+            const scrollBtn = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        };
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Factor expansion function
+        function expandFactor(element) {
+            element.classList.toggle('expanded');
+            const factors = document.querySelectorAll('.factor');
+            factors.forEach(factor => {
+                if (factor !== element) {
+                    factor.classList.remove('expanded');
+                }
+            });
+        }
+
+        // Add animation delay to factors
+        document.addEventListener('DOMContentLoaded', function() {
+            const factors = document.querySelectorAll('.factor');
+            
+            factors.forEach((factor, index) => {
+                // Get the original description and title
+                const originalDesc = factor.querySelector('p').textContent;
+                const title = factor.querySelector('h2').textContent.replace(/^\d+\.\s+/, ''); // Remove numbering
+                
+                // Create short description
+                const shortDesc = originalDesc.slice(0, 100) + '...';
+                
+                // Create Google search URL
+                const searchQuery = `heart disease ${title.toLowerCase()}`;
+                const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+                
+                // Update HTML structure
+                factor.innerHTML = `
+                    <h2>${factor.querySelector('h2').textContent}</h2>
+                    <p class="description-short">${shortDesc}</p>
+                    <p class="description-full">${originalDesc}</p>
+                    <a href="${googleSearchUrl}" class="learn-more-btn" target="_blank">Learn more</a>
+                `;
+
+                // Add animation delay
+                factor.style.setProperty('--i', index + 1);
+                
+                // Optional: Add click handler for the entire card
+                factor.addEventListener('click', function(e) {
+                    // Only trigger if not clicking the learn more button
+                    if (!e.target.classList.contains('learn-more-btn')) {
+                        this.classList.toggle('expanded');
+                        
+                        // Close other expanded factors
+                        factors.forEach(f => {
+                            if (f !== this) f.classList.remove('expanded');
+                        });
+                        
+                        // Smooth scroll to this factor if expanded
+                        if (this.classList.contains('expanded')) {
+                            this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
